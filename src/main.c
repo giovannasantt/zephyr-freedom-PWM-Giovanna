@@ -54,6 +54,9 @@ int main(void)
 		pwm_tpm_CnV(TPM2, 0, duty_100);
 		pwm_tpm_CnV(TPM2, 1, duty_50);
 		k_msleep(1000); // Aguarda 1 segundo antes de repetir o ciclo
+		pwm_tpm_CnV(TPM2, 0, leddesligado);
+		pwm_tpm_CnV(TPM2, 1, leddesligado);
+		k_msleep(1000); // Aguarda 1 segundo antes de repetir o ciclo
 	
     }
 
