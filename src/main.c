@@ -45,12 +45,12 @@ int main(void)
     // Loop infinito
     for (;;)
     {
-		//pwm_tpm_CnV(TPM2, 0, duty_100);
-		//pwm_tpm_CnV(TPM2, 1, duty_50);
-		//k_msleep(1000); 
-		//pwm_tpm_CnV(TPM2, 0, duty_25); // O programa poderia alterar o duty cycle dinamicamente aqui se desejado
-		//pwm_tpm_CnV(TPM2, 1, duty_50);
-		
+		pwm_tpm_CnV(TPM2, 0, duty_100);
+		pwm_tpm_CnV(TPM2, 1, duty_50);
+		k_msleep(1000); 
+		pwm_tpm_CnV(TPM2, 0, duty_75); // O programa poderia alterar o duty cycle dinamicamente aqui se desejado
+		pwm_tpm_CnV(TPM2, 1, duty_50);
+		k_msleep(1000); // Aguarda 1 segundo antes de repetir o ciclo
 		pwm_tpm_CnV(TPM2, 0, duty_100);
 		pwm_tpm_CnV(TPM2, 1, duty_50);
 		k_msleep(1000); // Aguarda 1 segundo antes de repetir o ciclo
